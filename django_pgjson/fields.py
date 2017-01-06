@@ -14,10 +14,12 @@ from django.db import models
 from django.db.backends.postgresql_psycopg2.version import get_version
 from django.conf import settings
 from django.utils import six
-
+print "VERSION:", django.VERSION
 if django.VERSION >= (1, 7):
+    print "++++++++++++++++++++++"
     from django.utils.module_loading import import_string
 else:
+    print ";;;;;;;;;;;;;;;;;;;;;"
     from django.utils.module_loading import import_by_path as import_string
 
 
